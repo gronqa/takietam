@@ -28,9 +28,9 @@ const Navbar: React.FC<NavbarProps> = ({ isTransparent: initialTransparent = fal
   }, []);
 
   const navLinks = [
-    { name: 'O nas', href: '/#o-nas' },
-    { name: 'Usługi', href: '/#uslugi' },
-    { name: 'Kontakt', href: '/#kontakt' },
+    { name: 'O nas', href: '/takietam/#o-nas' },
+    { name: 'Usługi', href: '/takietam/#uslugi' },
+    { name: 'Kontakt', href: '/takietam/#kontakt' },
   ];
 
   const shouldBeTransparent = initialTransparent && !isScrolled && !isOpen;
