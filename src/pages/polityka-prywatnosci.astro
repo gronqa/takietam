@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Polityka Prywatności | Takie Tam Art.Deco">
+  <Navbar client:load slot="header" />
+  
+  <div class="pt-40 pb-24 bg-white min-h-screen">
+    <div class="max-w-3xl mx-auto px-6 prose prose-pink">
+      <h1 class="text-4xl font-serif font-bold text-slate-900 mb-8">Polityka Prywatności</h1>
+      
+      <p class="text-slate-600 leading-relaxed">
+        Niniejsza polityka prywatności określa zasady przetwarzania danych osobowych użytkowników korzystających ze strony internetowej Takie Tam Art.Deco.
+      </p>
+
+      <h2 class="text-2xl font-serif font-bold text-slate-900 mt-12 mb-4">1. Administrator Danych</h2>
+      <p class="text-slate-600">
+        Administratorem Twoich danych osobowych jest <strong>Agnieszka Derejczyk Takie Tam Art.Deco</strong> z siedzibą w Zabrzu przy ul. Powstańców Śląskich 2.<br />
+        NIP: 9111838107<br />
+        REGON: 021957658
+      </p>
+
+      <h2 class="text-2xl font-serif font-bold text-slate-900 mt-12 mb-4">2. Zakres Przetwarzania</h2>
+      <p class="text-slate-600">
+        Dane przetwarzane są wyłącznie w celu obsługi zapytań przesłanych drogą telefoniczną lub mailową oraz w celu realizacji zamówień.
+      </p>
+
+      <h2 class="text-2xl font-serif font-bold text-slate-900 mt-12 mb-4">3. Pliki Cookies</h2>
+      <p class="text-slate-600">
+        Strona może wykorzystywać pliki cookies w celach statystycznych oraz funkcjonalnych, aby zapewnić poprawne działanie serwisu.
+      </p>
+
+      <h2 class="text-2xl font-serif font-bold text-slate-900 mt-12 mb-4">4. Twoje Prawa</h2>
+      <p class="text-slate-600">
+        Masz prawo do wglądu w swoje dane, ich poprawiania oraz żądania ich usunięcia. W tym celu prosimy o kontakt pod adresem: kontakt@takietam.art.
+      </p>
+
+      <div class="mt-16 pt-8 border-t border-brand-pink">
+        <a href="/" class="text-brand-accent font-semibold hover:text-brand-gold transition-colors flex items-center gap-2">
+          &larr; Powrót do strony głównej
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <Footer slot="footer" />
+</Layout>

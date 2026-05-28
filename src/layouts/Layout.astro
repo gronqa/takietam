@@ -1,0 +1,111 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  isTransparent?: boolean;
+}
+
+const { 
+  title, 
+  description = "Takie Tam Art.Deco Zabrze - Dekoracje balonowe, kwiaty, flower boxy i upominki.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen flex flex-col overflow-x-hidden">
+    <slot name="header" />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <slot name="footer" />
+
+    <style is:global>
+      html.lenis, html.lenis body {
+        height: auto;
+      }
+
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      .lenis.lenis-scrolling iframe {
+        pointer-events: none;
+      }
+      
+      /* Clean font rendering */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+    </style>
+
+    <script>
+      import Lenis from '@studio-freight/lenis'
+
+      // Initialize Lenis with optimized settings for Chrome
+      const lenis = new Lenis({
+        lerp: 0.1, // Using lerp instead of duration for more consistent performance
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+        infinite: false,
+      })
+
+      function raf(time: number) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+
+      // Handle all anchor links
+      document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          
+          // Only handle on-page anchors or root-relative anchors
+          if (!href) return;
+          
+          const targetId = href.includes('#') ? href.split('#')[1] : null;
+          if (!targetId) return;
+
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            e.preventDefault();
+            lenis.scrollTo(targetElement, {
+              offset: 0,
+              duration: 1.5,
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+            
+            // Update URL hash without jumping
+            window.history.pushState(null, '', `#${targetId}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Takie Tam Art.Deco Zabrze | Dekoracje, Kwiaty, Balony">
+	<Navbar client:load isTransparent={true} slot="header" />
+	
+	<Hero client:load />
+	
+	<section id="o-nas" class="py-24 bg-white overflow-hidden">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="flex flex-col lg:flex-row gap-16 items-center">
+				<div class="lg:w-1/2 relative">
+					<div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-pink rounded-full blur-2xl opacity-50 z-0"></div>
+					<div class="art-deco-border p-4 bg-white relative z-10 shadow-2xl">
+						<img 
+							src="/sklep.jpg" 
+							alt="Pracownia Takie Tam" 
+							class="w-full aspect-square object-cover"
+						/>
+					</div>
+				</div>
+				<div class="lg:w-1/2 space-y-8">
+					<span class="text-brand-gold font-serif italic text-xl">O nas</span>
+					<h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
+						Pasja do Tworzenia <br /> 
+						<span class="text-brand-accent italic">Wyjątkowych</span> Chwil
+					</h2>
+					<p class="text-slate-600 leading-relaxed text-lg font-light">
+						W Takie Tam Art.Deco wierzymy, że każda okazja zasługuje na oprawę, która zapiera dech w piersiach. Nasza pracownia w Zabrzu to miejsce, gdzie artystyczna wizja spotyka się z rzemieślniczą precyzją.
+					</p>
+					<p class="text-slate-600 leading-relaxed text-lg font-light">
+						Specjalizujemy się w nowoczesnych dekoracjach balonowych, eleganckich flower boxach i unikatowych upominkach. Każdy projekt traktujemy indywidualnie, dbając o najmniejszy detale, aby oddać charakter Twojej uroczystości.
+					</p>
+					<div class="pt-4 flex items-center gap-6">
+						<div class="text-center">
+							<p class="text-3xl font-serif font-bold text-brand-accent">100%</p>
+							<p class="text-xs uppercase tracking-widest text-slate-500 font-bold">Pasji</p>
+						</div>
+						<div class="w-px h-10 bg-brand-pink"></div>
+						<div class="text-center">
+							<p class="text-3xl font-serif font-bold text-brand-accent">Unikatowe</p>
+							<p class="text-xs uppercase tracking-widest text-slate-500 font-bold">Projekty</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Services client:visible />
+	
+	<Contact client:visible />
+
+	<Footer slot="footer" />
+</Layout>
