@@ -7,37 +7,37 @@ const services = [
     title: "Dekoracje Balonowe",
     description: "Profesjonalne girlandy, ścianki i kompozycje, które odmienią każde wnętrze.",
     icon: "🎈",
-    image: "/imprezowe.jpg",
+    image: "imprezowe.jpg",
   },
   {
     title: "Kwiaty i Flower Boxy",
     description: "Eleganckie boxy i bukiety ze świeżych kwiatów, idealne na wyjątkowy prezent.",
     icon: "🌸",
-    image: "/kwiaty.jpg",
+    image: "kwiaty.jpg",
   },
   {
     title: "Bukiety Jadalne",
     description: "Słodkie i wytrawne kompozycje, które cieszą oko i podniebienie.",
     icon: "🍓",
-    image: "/jadalne.jpg",
+    image: "jadalne.jpg",
   },
   {
     title: "Kartki i Upominki",
     description: "Ręcznie robione pamiątki i unikatowe prezenty na każdą okazję.",
     icon: "🎁",
-    image: "/karty.jpg",
+    image: "karty.jpg",
   },
   {
     title: "Akcesoria Imprezowe",
     description: "Wszystko, czego potrzebujesz, aby zorganizować niezapomniane przyjęcie.",
     icon: "✨",
-    image: "/balony.jpg",
+    image: "balony.jpg",
   },
   {
     title: "Personalizowane Projekty",
     description: "Tworzymy dekoracje dopasowane do Twoich indywidualnych potrzeb i marzeń.",
     icon: "🎨",
-    image: "/personalizowane.jpg",
+    image: "personalizowane.jpg",
   }
 ];
 
