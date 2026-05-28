@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ isTransparent: initialTransparent = fal
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="/" className="group relative">
+        <a href="./" className="group relative">
           <span className="text-2xl font-serif font-bold tracking-widest text-brand-accent group-hover:text-brand-gold transition-colors">
             TAKIE TAM
           </span>

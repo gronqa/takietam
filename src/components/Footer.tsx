@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-serif font-semibold mb-6 uppercase tracking-widest text-brand-accent/80">Nawigacja</h4>
             <ul className="space-y-3">
-              <li><a href="/#o-nas" className="text-sm hover:text-brand-gold transition-colors">O nas</a></li>
-              <li><a href="/#uslugi" className="text-sm hover:text-brand-gold transition-colors">Usługi</a></li>
-              <li><a href="/#kontakt" className="text-sm hover:text-brand-gold transition-colors">Kontakt</a></li>
+              <li><a href="#o-nas" className="text-sm hover:text-brand-gold transition-colors">O nas</a></li>
+              <li><a href="#uslugi" className="text-sm hover:text-brand-gold transition-colors">Usługi</a></li>
+              <li><a href="#kontakt" className="text-sm hover:text-brand-gold transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Takie Tam Art.Deco. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex items-center gap-6">
-            <a href="/polityka-prywatnosci" className="text-xs text-slate-500 hover:text-brand-accent transition-colors">Polityka prywatności</a>
+            <a href="polityka-prywatnosci" className="text-xs text-slate-500 hover:text-brand-accent transition-colors">Polityka prywatności</a>
             <span className="text-slate-300">|</span>
             <p className="text-xs text-slate-500">
               Strona stworzona przez <a href="https://gronqa.pl" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-accent/70 hover:text-brand-gold transition-colors underline decoration-brand-pink underline-offset-4">gronqa.pl</a>
