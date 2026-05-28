@@ -81,9 +81,9 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12 relative z-20">
             <a 
               href="#uslugi" 
-              className="btn-floral btn-floral-primary"
+              className="btn-floral btn-floral-primary scale-y-[-1]"
             >
-              Nasze Usługi
+              <span className="scale-y-[-1]">Nasze Usługi</span>
             </a>
             <a 
               href="#kontakt" 
