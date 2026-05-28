@@ -52,6 +52,22 @@ h1, h2, h3, h4, .font-art-deco {
   @apply bg-brand-accent text-white shadow-md hover:shadow-brand-pink/50;
 }
 
+.btn-floral-mirrored {
+  @apply relative px-10 py-4 font-serif font-bold text-lg transition-all duration-500 overflow-hidden flex items-center justify-center gap-3;
+  border-top-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.btn-floral-mirrored:hover {
+  @apply scale-105;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
 .btn-floral-secondary {
   @apply border-2 border-brand-pink text-brand-accent bg-white/40 backdrop-blur-sm hover:bg-brand-pink/20;
 }
