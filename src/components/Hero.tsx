@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12 relative z-20">
             <a 
               href="#uslugi" 
-              className="btn-floral btn-floral-primary btn-floral-mirrored"
+              className="btn-floral btn-floral-primary"
             >
               Nasze Usługi
             </a>

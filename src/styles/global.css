@@ -42,7 +42,6 @@ h1, h2, h3, h4, .font-art-deco {
 
 .btn-floral {
   @apply relative px-10 py-4 font-serif font-bold text-lg transition-all duration-500 overflow-hidden flex items-center justify-center gap-3;
-  /* Original: Large TL, Large BR */
   border-top-left-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
   border-top-right-radius: 0.5rem;
@@ -57,26 +56,8 @@ h1, h2, h3, h4, .font-art-deco {
   @apply border-2 border-brand-pink text-brand-accent bg-white/40 backdrop-blur-sm hover:bg-brand-pink/20;
 }
 
-.btn-floral-mirrored {
-  /* Mirrored: Large TR, Large BL */
-  border-top-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  border-top-right-radius: 2.5rem;
-  border-bottom-left-radius: 2.5rem;
-}
-
-.btn-floral-mirrored:hover {
-  @apply scale-105;
-  /* Animacja dla lustrzanego: z dużych TR/BL na większe TL/BR (tak samo jak oryginał zmienia osie) */
-  border-top-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
 .btn-floral:hover {
   @apply scale-105;
-  /* Animacja dla oryginału: z dużych TL/BR na większe TR/BL */
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   border-top-right-radius: 2rem;
